@@ -5,7 +5,7 @@ A twitter bot for fetching and sending results from university website
 1. Run ```git clone git@github.com:ShivamJoker/Twitter-Result-Bot.git``` in your Terminal.
 2. ```cd Twitter-Result-Bot``` to switch to directory
 3. ```yarn install``` to install all package.json dependencies.
-4. Create a new file named ```config.js```, and copy the contents of ```configExample.js``` into ```config.js```.
+4. Rename ```configExample.js``` to ```config.js``` and put your details.
 
 ## Getting Twitter keys and secrets for ```config.js```
 1. Sign in to Twitter (preferable to create a separate account) and apply for a [developer account](https://developer.twitter.com/en/apply-for-access). [Primary reason: Making a bot]
