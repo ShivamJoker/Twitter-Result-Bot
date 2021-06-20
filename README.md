@@ -1,6 +1,12 @@
 # Twitter-Result-Bot
 A twitter bot for fetching and sending results from university website
 
+
+https://user-images.githubusercontent.com/23727670/122667339-fc85e180-d1cf-11eb-9b80-71a3b6dde057.mp4
+
+![tweet demo image](https://user-images.githubusercontent.com/23727670/122667465-9fd6f680-d1d0-11eb-9166-63c696509344.png)
+
+
 ## Instructions
 1. Run ```git clone git@github.com:ShivamJoker/Twitter-Result-Bot.git``` in your Terminal.
 2. ```cd Twitter-Result-Bot``` to switch to directory
