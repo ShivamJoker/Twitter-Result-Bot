@@ -5,4 +5,4 @@ const config = {
 	accessTokenSecret: 'abc'
 }
   
-  export default config;
+export default config;

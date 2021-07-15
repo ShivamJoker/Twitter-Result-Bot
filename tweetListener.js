@@ -4,7 +4,6 @@ import replyToTweet from "./reply.js";
 import { parseRoll } from "./utils.js";
 
 const timeout = 31000;
-let backoffExponential = 0;
 let timeLastResponseReceived;
 
 const client = new Twitter({
@@ -26,17 +25,6 @@ const handleTweet = async ({ text, id_str, user, retweeted }) => {
   console.log("Tweet sent", res.text);
 };
 
-async function reconnect(stream) {
-  backoffExponential++;
-  if (stream.destroy) stream.destroy();
-  await sleep(2 ** backoffExponential * 1000);
-  startStream();
-  // If you use this code, remember to also:
-  // 1. Reset backoffExponential at some point
-  // 2. Check if connected to network before starting stream
-  // 3. Make sure you do not start a stream if one is already running
-}
-
 async function sleep(delay) {
   return new Promise((resolve) => setTimeout(() => resolve(true), delay));
 }
@@ -50,7 +38,6 @@ const stream = client
       if (Date.now() - timeLastResponseReceived > timeout) {
         console.log("timeout");
         clearInterval(intervalId);
-        reconnect(stream);
       }
     }, timeout);
   })
